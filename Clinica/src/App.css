@@ -327,3 +327,31 @@ button.danger:hover {
   margin-bottom: 8px;
 }
 
+.alerts-section {
+  margin-top: 20px;
+  background: #fff3f3;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.alerts-section h2 {
+  margin-bottom: 12px;
+  color: #b91c1c; /* vermelho para alerta */
+}
+
+.alerts-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.alerts-section li {
+  background-color: #fee2e2;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: #b91c1c;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}

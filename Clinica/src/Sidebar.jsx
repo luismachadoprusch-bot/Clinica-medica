@@ -49,6 +49,26 @@ function Sidebar({ activePage, setActivePage }) {
               Histórico
             </button>
           </li>
+          
+          <li>
+  <button
+    className={activePage === "agenda" ? "active" : ""}
+    onClick={() => setActivePage("agenda")}
+  >
+    Agenda
+  </button>
+</li>
+
+<li>
+  <button
+    className={activePage === "atendimento" ? "active" : ""}
+    onClick={() => setActivePage("atendimento")}
+  >
+    Sala de Atendimento
+  </button>
+</li>
+
+
         </ul>
       </nav>
       <div className="sidebar-footer">

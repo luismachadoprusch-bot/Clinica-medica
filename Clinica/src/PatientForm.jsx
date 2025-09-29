@@ -7,6 +7,7 @@ function PatientForm({ addPatient }) {
     phone: "",
     email: "",
     history: "",
+    alerts: [], // campo de alertas adicionado
     visits: [],
   });
 
@@ -14,12 +15,18 @@ function PatientForm({ addPatient }) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleAlertsChange = (e) => {
+    // transforma texto separado por vírgula em array
+    const alertsArray = e.target.value.split(",").map((a) => a.trim());
+    setFormData({ ...formData, alerts: alertsArray });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.name) return alert("O nome é obrigatório!");
-    
+
     // Adiciona paciente
-    addPatient(formData);
+    addPatient({ ...formData, id: Date.now(), visits: [] });
 
     // Limpa o formulário
     setFormData({
@@ -28,6 +35,7 @@ function PatientForm({ addPatient }) {
       phone: "",
       email: "",
       history: "",
+      alerts: [],
       visits: [],
     });
   };
@@ -53,6 +61,7 @@ function PatientForm({ addPatient }) {
             onChange={handleChange}
           />
         </div>
+
         <div className="row">
           <input
             type="text"
@@ -69,6 +78,7 @@ function PatientForm({ addPatient }) {
             onChange={handleChange}
           />
         </div>
+
         <div className="row">
           <textarea
             name="history"
@@ -77,6 +87,16 @@ function PatientForm({ addPatient }) {
             onChange={handleChange}
           />
         </div>
+
+        <div className="row">
+          <textarea
+            name="alerts"
+            placeholder="Alergias / Contraindicações (separar por vírgula)"
+            value={formData.alerts.join(", ")}
+            onChange={handleAlertsChange}
+          />
+        </div>
+
         <div className="form-actions">
           <button type="submit">Cadastrar</button>
           <button
@@ -89,6 +109,7 @@ function PatientForm({ addPatient }) {
                 phone: "",
                 email: "",
                 history: "",
+                alerts: [],
                 visits: [],
               })
             }

@@ -1,0 +1,76 @@
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f6f9;
+  min-height: 100vh;
+  color: #1f2937;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.select-patient label {
+  font-weight: 500;
+}
+
+.select-patient select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.queues {
+  display: flex;
+  gap: 24px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.queue {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.queue h2 {
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.queue ul {
+  list-style: none;
+  padding: 0;
+}
+
+.queue li {
+  padding: 10px;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.queue button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.queue button:hover {
+  background-color: #1d4ed8;
+}
