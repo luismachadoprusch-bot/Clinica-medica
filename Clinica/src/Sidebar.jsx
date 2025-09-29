@@ -14,7 +14,7 @@ function Sidebar({ activePage, setActivePage }) {
               className={activePage === "dashboard" ? "active" : ""}
               onClick={() => setActivePage("dashboard")}
             >
-              {/* <i className="icon-dashboard"></i> */} Dashboard
+              Dashboard
             </button>
           </li>
           <li>
@@ -22,7 +22,7 @@ function Sidebar({ activePage, setActivePage }) {
               className={activePage === "cadastro" ? "active" : ""}
               onClick={() => setActivePage("cadastro")}
             >
-              {/* <i className="icon-user-plus"></i> */} Cadastro de Paciente
+              Cadastro de Paciente
             </button>
           </li>
           <li>
@@ -30,7 +30,15 @@ function Sidebar({ activePage, setActivePage }) {
               className={activePage === "pacientes" ? "active" : ""}
               onClick={() => setActivePage("pacientes")}
             >
-              {/* <i className="icon-list"></i> */} Lista de Pacientes
+              Lista de Pacientes
+            </button>
+          </li>
+          <li>
+            <button
+              className={activePage === "prontuario" ? "active" : ""}
+              onClick={() => setActivePage("prontuario")}
+            >
+              Prontuário
             </button>
           </li>
         </ul>

@@ -3,6 +3,7 @@ import Sidebar from "./Sidebar";
 import Dashboard from "./Dashboard";
 import PatientForm from "./PatientForm";
 import PatientList from "./PatientList";
+import Prontuario from "./Prontuario"; // componente do prontuário
 import "./App.css";
 
 function App() {
@@ -12,18 +13,19 @@ function App() {
   // Função para adicionar paciente
   const addPatient = (patient) => {
     setPatients([...patients, { ...patient, id: Date.now() }]);
-    setActivePage("pacientes"); // Depois de cadastrar, mostra lista
+    setActivePage("pacientes"); // depois de cadastrar, vai para lista
   };
 
   return (
     <div className="dashboard">
-      {/* Passando activePage para a Sidebar */}
+      {/* Passando activePage para destacar a página */}
       <Sidebar activePage={activePage} setActivePage={setActivePage} />
 
       <main className="main-content">
         {activePage === "dashboard" && <Dashboard patients={patients} />}
         {activePage === "cadastro" && <PatientForm addPatient={addPatient} />}
         {activePage === "pacientes" && <PatientList patients={patients} />}
+        {activePage === "prontuario" && <Prontuario />}
       </main>
     </div>
   );

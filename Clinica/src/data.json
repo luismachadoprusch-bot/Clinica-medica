@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "João Silva",
+    "age": 30,
+    "phone": "99999-9999",
+    "history": "Hipertensão, alergia a penicilina",
+    "visits": [
+      { "date": "2025-09-01", "notes": "Consulta de rotina" },
+      { "date": "2025-09-20", "notes": "Exame de sangue" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Maria Oliveira",
+    "age": 45,
+    "phone": "98888-8888",
+    "history": "Diabetes tipo 2",
+    "visits": [
+      { "date": "2025-09-05", "notes": "Consulta de acompanhamento" }
+    ]
+  }
+]
