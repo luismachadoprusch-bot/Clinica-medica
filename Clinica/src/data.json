@@ -1,23 +1,90 @@
 [
   {
     "id": 1,
-    "name": "João Silva",
-    "age": 30,
-    "phone": "99999-9999",
-    "history": "Hipertensão, alergia a penicilina",
+    "name": "Ana Beatriz Soares",
+    "age": 34,
+    "email": "ana.soares.fict@exemplo.com",
+    "phone": "+55 (61) 2111-7962",
+    "history": "Dor lombar intermitente há 3 meses; exame físico com limitação de flexão; Rx sem alterações significativas.",
     "visits": [
-      { "date": "2025-09-01", "notes": "Consulta de rotina" },
-      { "date": "2025-09-20", "notes": "Exame de sangue" }
+      { "date": "2025-09-12", "notes": "Consulta inicial, prescrito fisioterapia e analgésico" }
     ]
   },
   {
     "id": 2,
-    "name": "Maria Oliveira",
-    "age": 45,
-    "phone": "98888-8888",
-    "history": "Diabetes tipo 2",
+    "name": "Carlos Eduardo Martins",
+    "age": 47,
+    "email": "carlos.martins.fake@exemplo.com",
+    "phone": "+55 (61) 2636-9813",
+    "history": "Hipertensão controlada com medicação (losartana). Última PA 130/80 mmHg.",
     "visits": [
-      { "date": "2025-09-05", "notes": "Consulta de acompanhamento" }
+      { "date": "2025-08-28", "notes": "Ajuste de hábitos alimentares e retorno em 3 meses" }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Beatriz Lima Ramos",
+    "age": 26,
+    "email": "beatriz.ramos.test@exemplo.com",
+    "phone": "+55 (61) 3387-4219",
+    "history": "Episódios recorrentes de enxaqueca há 2 anos, uso esporádico de analgésicos.",
+    "visits": [
+      { "date": "2025-07-05", "notes": "Iniciada profilaxia com amitriptilina, agendada avaliação neurológica" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "João Pedro Alves",
+    "age": 59,
+    "email": "joao.alves.fict@exemplo.com",
+    "phone": "+55 (61) 2766-2487",
+    "history": "Diabetes tipo 2, HbA1c 7,8%. Encaminhado ao serviço de endocrinologia.",
+    "visits": [
+      { "date": "2025-06-18", "notes": "Ajuste de dose de metformina e orientação nutricional" }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Marina Duarte",
+    "age": 38,
+    "email": "marina.duarte.fake@exemplo.com",
+    "phone": "+55 (61) 2206-8327",
+    "history": "Tosse produtiva e febrícula por 10 dias; Rx de tórax sem consolidações.",
+    "visits": [
+      { "date": "2025-05-02", "notes": "Tratamento sintomático e retorno se piora" }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Felipe Gonçalves",
+    "age": 22,
+    "email": "felipe.goncalves.test@exemplo.com",
+    "phone": "+55 (61) 2168-6271",
+    "history": "Lesão esportiva (entorse de tornozelo), sem sinais de fratura em Rx.",
+    "visits": [
+      { "date": "2025-04-11", "notes": "Imobilização por 7 dias e fisioterapia funcional" }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Laura Pereira",
+    "age": 45,
+    "email": "laura.pereira.fict@exemplo.com",
+    "phone": "+55 (61) 2669-3184",
+    "history": "Refluxo gastroesofágico crônico; PPI iniciado por 8 semanas, orientação dietética.",
+    "visits": [
+      { "date": "2025-03-29", "notes": "Consulta de acompanhamento, monitorar sintomas" }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Ricardo Fernandes",
+    "age": 66,
+    "email": "ricardo.fernandes.test@exemplo.com",
+    "phone": "+55 (61) 3531-2170",
+    "history": "Avaliação cardiológica pré-operatória: ECO sem alterações significativas, risco compatível.",
+    "visits": [
+      { "date": "2025-02-14", "notes": "Liberação para cirurgia com controle de medicações" }
     ]
   }
 ]

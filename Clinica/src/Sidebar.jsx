@@ -41,6 +41,14 @@ function Sidebar({ activePage, setActivePage }) {
               Prontuário
             </button>
           </li>
+          <li>
+            <button
+              className={activePage === "historico" ? "active" : ""}
+              onClick={() => setActivePage("historico")}
+            >
+              Histórico
+            </button>
+          </li>
         </ul>
       </nav>
       <div className="sidebar-footer">

@@ -1,0 +1,37 @@
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f6f9;
+  min-height: 100vh;
+  color: #1f2937;
+}
+
+.page h1 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.visit-card {
+  background-color: #f3f4f6;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+h2 {
+  margin-bottom: 8px;
+}
+
+h3 {
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
