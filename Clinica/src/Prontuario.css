@@ -1,0 +1,113 @@
+/* Prontuario.css */
+
+/* Container da página */
+.page {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Título da página */
+.page h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  color: #1a1a2e;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Mensagem quando não há pacientes */
+.page p {
+  text-align: center;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+/* Estilo da tabela */
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Cabeçalho da tabela */
+.table thead {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.table th, .table td {
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+/* Linhas alternadas com efeito sutil */
+.table tbody tr:nth-child(even) {
+  background-color: #f0f4ff;
+}
+
+.table tbody tr {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover nas linhas */
+.table tbody tr:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  background-color: #e0e7ff;
+}
+
+/* Bordas arredondadas nos cantos do cabeçalho */
+.table thead th:first-child {
+  border-top-left-radius: 12px;
+}
+.table thead th:last-child {
+  border-top-right-radius: 12px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .table thead {
+    display: none;
+  }
+
+  .table, .table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table tr {
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  .table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    font-size: 0.95rem;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 20px;
+    width: 45%;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+  }
+}
