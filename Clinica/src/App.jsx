@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import Sidebar from "./Sidebar";
+import Dashboard from "./Dashboard";
+import PatientForm from "./PatientForm";
+import PatientList from "./PatientList";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [patients, setPatients] = useState([]);
+  const [activePage, setActivePage] = useState("dashboard");
+
+  // Função para adicionar paciente
+  const addPatient = (patient) => {
+    setPatients([...patients, { ...patient, id: Date.now() }]);
+    setActivePage("pacientes"); // Depois de cadastrar, mostra lista
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="dashboard">
+      {/* Passando activePage para a Sidebar */}
+      <Sidebar activePage={activePage} setActivePage={setActivePage} />
+
+      <main className="main-content">
+        {activePage === "dashboard" && <Dashboard patients={patients} />}
+        {activePage === "cadastro" && <PatientForm addPatient={addPatient} />}
+        {activePage === "pacientes" && <PatientList patients={patients} />}
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
