@@ -4,7 +4,7 @@ function PatientList({ patients, onEdit, onDelete, onOpen, onNew }) {
       <div className="list-header">
         <h1>Pacientes</h1>
         <div>
-          <button onClick={onNew}>Novo</button>
+          <button onClick={onNew}>Novo Paciente</button>
         </div>
       </div>
 
@@ -18,23 +18,30 @@ function PatientList({ patients, onEdit, onDelete, onOpen, onNew }) {
               <th>Idade</th>
               <th>Contato</th>
               <th>Última visita</th>
-              <th></th>
+              <th>Ações</th>
             </tr>
           </thead>
           <tbody>
             {patients.map((p) => {
-              const lastVisit = p.visits && p.visits.length ? p.visits[p.visits.length - 1].date : "-";
+              const lastVisit =
+                p.visits && p.visits.length
+                  ? p.visits[p.visits.length - 1].date
+                  : "-";
               return (
                 <tr key={p.id}>
                   <td>
-                    <button className="linkish" onClick={() => onOpen(p.id)}>{p.name}</button>
+                    <button className="linkish" onClick={() => onOpen(p.id)}>
+                      {p.name}
+                    </button>
                   </td>
                   <td>{p.age || "-"}</td>
                   <td>{p.phone || p.email || "-"}</td>
                   <td>{lastVisit}</td>
                   <td className="actions">
                     <button onClick={() => onEdit(p.id)}>Editar</button>
-                    <button className="danger" onClick={() => onDelete(p.id)}>Remover</button>
+                    <button className="danger" onClick={() => onDelete(p.id)}>
+                      Remover
+                    </button>
                   </td>
                 </tr>
               );
