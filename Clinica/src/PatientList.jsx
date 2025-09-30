@@ -27,6 +27,7 @@ function PatientList({ patients, onEdit, onDelete, onOpen, onNew }) {
                 p.visits && p.visits.length
                   ? p.visits[p.visits.length - 1].date
                   : "-";
+
               return (
                 <tr key={p.id}>
                   <td>
@@ -38,8 +39,11 @@ function PatientList({ patients, onEdit, onDelete, onOpen, onNew }) {
                   <td>{p.phone || p.email || "-"}</td>
                   <td>{lastVisit}</td>
                   <td className="actions">
-                    <button onClick={() => onEdit(p.id)}>Editar</button>
-                    <button className="danger" onClick={() => onDelete(p.id)}>
+                    <button onClick={() => onEdit(p)}>Editar</button>
+                    <button
+                      className="danger"
+                      onClick={() => onDelete(p.id)}
+                    >
                       Remover
                     </button>
                   </td>
